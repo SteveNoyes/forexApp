@@ -12,11 +12,11 @@ const generateHTML = (data) => {
   const html = `
     <h2 class='title'>GBP/USD</h2>
     <p class='base'>${data.base}</p>
-    <p class="date">${data.date}</p>
     <p class="timestamp">${d}</p>
-    <p>${data.rates.GBP}</p>
+    <p class>${data.rates.GBP}</p>
+    <p>${data.rates.USD}</p>
   `
-  const test = document.querySelector('.test');
+  const test = document.querySelector('.generateHTML');
   test.innerHTML = html;
 }
 
