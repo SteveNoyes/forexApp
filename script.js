@@ -5,14 +5,10 @@ fetch(forexData)
   .then( (parse) => generateHTML(parse))
 
 const generateHTML = (data) => {
-  let a = data.timestamp;
-  let d = new Date(a);
-
-  console.log(d);
   const html = `
     <h2 class='title'>GBP/USD</h2>
     <p class='base'>${data.base}</p>
-    <p class="timestamp">${d}</p>
+    <p class="timestamp">${data.date}</p>
     <p class>${data.rates.GBP}</p>
     <p>${data.rates.USD}</p>
   `
